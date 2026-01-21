@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BasicWidgetsCF7</string>
+    <string name="hello_message">Hello Coding Factory!</string>
+    <string name="button_text">Click</string>
+</resources>
