@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImageViewCF7</string>
+    <string name="text_description">This is some demo description for the image that we present at the screen</string>
+    <string name="image_reference">Image reference</string>
+</resources>
