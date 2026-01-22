@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">nestedLinearLayoutApp</string>
+    <string name="title_text">Coding Factory</string>
+    <string name="end_text">Android Development</string>
+</resources>
