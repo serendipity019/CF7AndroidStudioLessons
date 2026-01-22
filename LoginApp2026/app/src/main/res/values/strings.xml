@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoginApp2026</string>
+    <string name="login_btn">Login</string>
+    <string name="secret_activity_welcome_text">Welcome Admin</string>
+</resources>
