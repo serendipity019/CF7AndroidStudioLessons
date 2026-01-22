@@ -16,28 +16,27 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView imageIV;
-    private Button rollButton;
     private TextView descriptionIV, referencesIV;
 
-    private int[] imageIds = {
+    private final int[] imageIds = {
             R.drawable.mountain,
             R.drawable.sea,
             R.drawable.sky
     };
 
-    private String[] imageDescriptions = {
+    private final String[] imageDescriptions = {
             "Golf in the mountains.",
             "Golf by the sea.",
             "Golf in the sky and fly."
     };
 
-    private String[] imageReferences = {
+    private final String[] imageReferences = {
             "<a href=\"https://www.flaticon.com/free-stickers/sports-and-competition\" title=\"sports and competition stickers\">Sports and competition stickers created by Stickers - Flaticon</a>",
             "<a href=\"https://www.flaticon.com/free-stickers/sports-and-competition\" title=\"sports and competition stickers\">Sports and competition stickers created by Stickers - Flaticon</a>",
             "<a href=\"https://www.flaticon.com/free-stickers/sports-and-competition\" title=\"sports and competition stickers\">Sports and competition stickers created by Stickers - Flaticon</a>"
     };
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
 
     @Override
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageIV = findViewById(R.id.imageIV);
-        rollButton = findViewById(R.id.rollButton);
+        Button rollButton = findViewById(R.id.rollButton);
         descriptionIV = findViewById(R.id.descriptionIV);
         referencesIV = findViewById(R.id.referencesIV);
 
