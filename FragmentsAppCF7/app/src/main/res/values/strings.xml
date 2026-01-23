@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FragmentsAppCF7</string>
+    <string name="upload_fragment">Upload fragment</string>
+    <string name="home_fragment">Home fragment</string>
+    <string name="post_fragment">Post fragment</string>
+    <string name="favorite_fragment">Favorite fragment</string>
+    <string name="profile_fragment">Profile fragment</string>
+</resources>
