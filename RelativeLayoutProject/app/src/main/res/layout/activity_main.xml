@@ -32,6 +32,7 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_below="@+id/topLL"
         android:layout_height="180dp">
@@ -43,9 +44,142 @@
             android:padding="8dp"
             android:textSize="16sp"
             android:justificationMode="inter_word"/>
-
-
-
     </ScrollView>
+
+    <TextView
+        android:id="@+id/checkboxTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox_title"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/scrollView"
+        android:textStyle="bold"
+        />
+
+    <CheckBox
+        android:id="@+id/athensCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkboxTitleTv"
+        android:text="Athens"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"/>
+
+    <CheckBox
+        android:id="@+id/patraCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/athensCB"
+        android:layout_below="@+id/checkboxTitleTv"
+        android:text="Patra"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/radioTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/radio_title"
+        android:layout_below="@+id/patraCB"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/agreeRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioTitleTv"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/yesRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="10dp"/>
+
+        <RadioButton
+            android:id="@+id/noRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="18sp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ratingBarTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/agreeRG"
+        android:padding="8dp"
+        android:text="@string/rate_title"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/likeRB"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/ratingBarTV"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:stepSize="1"/>
+
+    <TextView
+        android:id="@+id/seekBarTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/likeRB"
+        android:padding="8dp"
+        android:text="@string/seekbar_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <SeekBar
+        android:id="@+id/ageSB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarTV"
+        android:min="18"
+        android:max="75"/>
+
+    <TextView
+        android:id="@+id/switchTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ageSB"
+        android:padding="8dp"
+        android:text="@string/switch_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <Switch
+        android:id="@+id/switchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ageSB"
+        android:layout_toEndOf="@id/switchTV"
+        android:paddingTop="8dp"
+        android:text="light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Submit"
+        />
 
 </RelativeLayout>
