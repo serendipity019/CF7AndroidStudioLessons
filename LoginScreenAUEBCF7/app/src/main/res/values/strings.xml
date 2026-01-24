@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LoginScreenAUEBCF7</string>
+    <string name="aueb_logo">Athens University of Economics and Business Logo</string>
+    <string name="login_text">Login here</string>
+    <string name="welcome_text">Welcome back!\nWe\'re glad to see you again</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_your_password">Forgot your Password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_text">Create new account</string>
+    <string name="continue_text">Or continue with</string>
+    <string name="google_btn">Google login button</string>
+    <string name="x_btn">X login button</string>
+    <string name="facebook_btn">Facebook login button</string>
+</resources>

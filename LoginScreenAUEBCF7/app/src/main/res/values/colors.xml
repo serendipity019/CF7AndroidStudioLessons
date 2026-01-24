@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainColor">#762124</color>
+    <color name="darkColor">#590C06</color>
+    <color name="editTextBackgroundColor">#1A762124</color>
+    <color name="mainBackgroundColor">#F5F5F5</color>
+    <color name="socialBackgroundColor">#ECECEC</color>
+    <color name="hintTextColor">#1A762124</color>
+    <color name="backgroundButtonTintColor">#ECECEC</color>
+</resources>

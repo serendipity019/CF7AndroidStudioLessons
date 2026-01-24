@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/mainBackgroundColor">
+
+    <!--Logo image-->
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/aueb_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aueb_logo"
+        android:layout_marginTop="-222dp" />
+
+    <!-- LoginTitle   -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/loginTitleMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_text"
+        android:textColor="@color/mainColor"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoIV"
+        android:layout_marginTop="-200dp"
+        />
+
+    <!-- Welcome Text   -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:textColor="@color/darkColor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitleMTV"
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- Email layout   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMTV"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/email_hint"
+        app:hintTextColor="@color/mainColor"
+        app:boxBackgroundColor="@color/editTextBackgroundColor"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="@color/mainColor"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailTIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp"
+            android:textColor="@color/darkColor"
+            android:textColorHint="@color/hintTextColor"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password layout   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTIL"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/password_hint"
+        app:hintTextColor="@color/mainColor"
+        app:boxBackgroundColor="@color/editTextBackgroundColor"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="@color/mainColor"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordTIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:textColor="@color/darkColor"
+            android:textColorHint="@color/hintTextColor"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Forgot password text-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/forgotPasswordMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_your_password"
+        android:textColor="@color/mainColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTIL"
+        android:layout_marginTop="8dp"
+        />
+
+    <!--Sign in button-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordMTV"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="8dp"
+        android:text="@string/sign_in"
+        android:textSize="22sp"
+        app:backgroundTint="@color/mainColor"
+        android:padding="12dp"
+        />
+
+    <!--Create text-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/createMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_text"
+        android:textColor="@color/darkColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInBtn"
+        android:layout_marginTop="16dp"
+        />
+
+    <!--Continue text-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/continueMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_text"
+        android:textColor="@color/mainColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createMTV"
+        android:layout_marginTop="24dp"
+        />
+
+    <!--Social sign in-->
+    <LinearLayout
+        android:id="@+id/socialBtnLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continueMTV"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        >
+
+        <!--Google Button-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/backgroundButtonTintColor"
+            android:layout_marginRight="16dp"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/google_btn"
+                android:src="@drawable/google_logo"
+                android:layout_gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--X Button-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/backgroundButtonTintColor"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/x_btn"
+                android:src="@drawable/x_logo"
+                android:layout_gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Facebook Button-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/backgroundButtonTintColor">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/facebook_btn"
+                android:src="@drawable/facebook"
+                android:layout_gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
