@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -48,32 +49,36 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().replace(R.id.frameLayout, new HomeFragment(), "HomeFragment").commit();
         titleTV.setText("Home");
 
-        bottomNV.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+        bottomNV.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.uploadItem:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, new UploadFragment(), "UploadFragment").commit();
-                        titleTV.setText("Upload");
-                        break;
-                    case R.id.postItem:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, new PostFragment(), "PostFragment").commit();
-                        titleTV.setText("Post");
-                        break;
-                    case R.id.homeItem:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, new HomeFragment(), "HomeFragment").commit();
-                        titleTV.setText("Home");
-                        break;
-                    case R.id.favorItem:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, new FavoriteFragment(), "FavoriteFragment").commit();
-                        titleTV.setText("My Favorites");
-                        break;
-                    case R.id.profileItem:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, new ProfileFragment(), "ProfileFragment").commit();
-                        titleTV.setText("My Profile");
-                        break;
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int itemId = menuItem.getItemId();
+                Fragment fragment = null;
+                String title = "";
 
+                if (itemId == R.id.uploadItem) {
+                    fragment = new UploadFragment();
+                    title = "Upload";
+                } else if (itemId == R.id.postItem) {
+                   fragment = new PostFragment();
+                   title = "Post";
+                } else if (itemId == R.id.homeItem) {
+                    fragment = new HomeFragment();
+                    title = "Home";
+                } else if (itemId == R.id.favorItem) {
+                    fragment = new FavoriteFragment();
+                    title = "Favorites";
+                } else if (itemId == R.id.profileItem) {
+                    fragment = new ProfileFragment();
+                    title = "My Profile";
                 }
+
+                if (fragment != null) {
+                    fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment, title).commit();
+                    titleTV.setText(title);
+                }
+
+                return true;
             }
         });
 
