@@ -2,6 +2,6 @@
     <string name="app_name">KiloToPoundConvertApp</string>
     <string name="title_text">Unit Converter</string>
     <string name="kilo_text">Enter here the Kilograms you want to convert</string>
-    <string name="btn_text">Convert to Pounds</string>
+    <string name="btn_text">CONVERT TO POUNDS</string>
     <string name="pound_text">Pounds</string>
 </resources>

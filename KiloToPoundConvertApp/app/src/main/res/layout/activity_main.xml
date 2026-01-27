@@ -36,6 +36,74 @@
         android:textSize="32sp"
         android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/kiloTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitleTV"
+        android:text="@string/kilo_text"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray"/>
+
+    <EditText
+        android:id="@+id/kiloET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kiloTV"
+        android:layout_marginHorizontal="40dp"
+/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/convertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:text="@string/btn_text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kiloET"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="0dp"
+        />
+
+    <TextView
+        android:id="@+id/poundTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertBtn"
+        android:text="@string/pound_text"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        android:textColor="@color/gray"/>
+
+    <TextView
+        android:id="@+id/convPoundTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poundTV"
+        android:text="@string/pound_text"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="44sp"
+        android:textStyle="normal"
+        android:textColor="@color/gray_02"/>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
